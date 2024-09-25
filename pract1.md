@@ -83,14 +83,14 @@ done
 #!/bin/bash
 
 if [[ $# -ne 1 ]]; then
-	echo "РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ: $0 /РїСѓС‚СЊ/Рє/РєР°С‚Р°Р»РѕРіСѓ."
+	echo "Использование: $0 /путь/к/каталогу."
 	exit 1
 fi
 
 directory=$1
 
 if [[ ! -d $directory ]]; then
-	echo "РћС€РёР±РєР°: РєР°С‚Р°Р»РѕРі $directory РЅРµ РЅР°Р№РґРµРЅ."
+	echo "Ошибка: каталог $directory не найден."
 	exit 1
 fi
 
@@ -110,17 +110,15 @@ for hash in "${!file_hashes[@]}"; do
 
 	if [[ $files_count -gt 1 ]]; then
 		found_duplicates=true
-		echo "РќР°Р№РґРµРЅС‹ РґСѓР±Р»РёРєР°С‚С‹:"
+		echo "Найдены дубликаты:"
 		echo -e "$files"
 	fi
 done
 
 if ! $found_duplicates; then
-	echo "Р”СѓР±Р»РёРєР°С‚РѕРІ РЅРµ РЅР°Р№РґРµРЅРѕ."
+	echo "Дубликатов не найдено."
 	exit 1
 fi
-```
-- ![image](https://github.com/user-attachments/assets/bdb659b5-68fa-4536-aa6b-74e38d295bd7)
 ```
 
 ## Задача 8
