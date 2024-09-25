@@ -120,6 +120,8 @@ if ! $found_duplicates; then
 	exit 1
 fi
 ```
+![366619126-bdb659b5-68fa-4536-aa6b-74e38d295bd7](https://github.com/user-attachments/assets/d8b28332-0a0d-43ef-9b99-2ec1236a9233)
+
 
 ## Задача 8
 
